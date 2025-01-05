@@ -1,0 +1,357 @@
+/* @font-face {
+        font-family: "Nanum Pen Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url('/font/NanumPenScript-Regular.woff')
+      format("woff");
+  } */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; margin: 0;
+}
+
+#progress-container {display: none; position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 70%; max-width: 800px; text-align: center; z-index: 1000; background-color: #fff; padding: 10px 0; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);}
+#progress{display: flex; align-items: center; justify-content: space-between; position: relative;}
+#back-button{border: none; background: none; cursor: pointer; position: absolute; left: -40px; top: 50%; transform: translateY(-50%);}
+#back-button-inner{width: 30px; height: 30px; background-color: #0043fe; border-radius: 50%; display: flex; align-items: center; justify-content: center;}
+#back-button-inner span{color: #fff; font-size: 20px;}
+.progress-bar {height: 10px; /* 진행 바 높이 */background-color: #0043fe; /* 진행 바 색상 */width: 0%; /* 초기 너비 */transition: width 0.3s ease-in-out; /* 너비 변경 애니메이션 */border-radius: 5px; /* 둥근 모서리 */}
+.back-button {position: absolute; /* 진행 바의 왼쪽에 고정 */left: -40px; /* 적절한 거리로 조정 */top: 50%;transform: translateY(-50%); /* 중앙 정렬 */background-color: #0043fe; /* 버튼 배경색 */border: none; /* 테두리 제거 */width: 30px; /* 버튼 크기 */height: 30px;border-radius: 50%; /* 둥근 버튼 */display: flex;align-items: center;justify-content: center;color: #fff; /* 버튼 안 텍스트 색상 */cursor: pointer; /* 커서 변경 */}
+.progress-text {font-size: 14px; /* 텍스트 크기 */color: #888; /* 텍스트 색상 */margin-top: 10px; /* 진행 바와 간격 */}
+.real .selfmade {
+    display: none;
+    text-align: center;
+}
+
+.frame .real .selfmade:nth-child(1) {
+        display: block;
+}
+    
+
+.frame { 
+        position: relative;
+        width: 900px;
+        /* height: 900px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        object-fit: contain;
+      }
+
+.partner {
+    font-family: SandollGyeokdongG2TTF-04Rg;
+    font-size: 23px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: -1.61px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 13px;
+}
+.patentpartner {
+    font-family: SandollGyeokdongG2TTF-06Hv;
+    font-size: 44px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: 0.88px;
+    text-align: left;
+    color: #0043fe;
+    margin-bottom: 60px;
+}
+
+.ment {
+    font-family: Poppins;
+    font-size: 71px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 4.97px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 131px;
+}
+
+.m_ment {
+    font-family: "Nanum Pen Script", cursive;
+    font-size: 71px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 4.97px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 189px;    
+
+}
+
+.botton1 {
+    width: 367px;
+    height: 94px;
+    border-radius: 500px;
+    -webkit-backdrop-filter: blur(17.2px);
+    backdrop-filter: blur(17.2px);
+    box-shadow: 0 0 15px 0 rgba(13, 78, 185, 0.3);
+    border: solid 1px #fff;
+    background-color: #668EFE;
+    font-family: Poppins;
+    font-size: 50px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 50px; /* 폰트 크기와 동일하게 */
+    letter-spacing: -2.5px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+        span{
+            transform: translateY(-1.4px); /* 필요시 미세 조정 */
+            }
+}
+
+.botton1:hover {
+    background-color: #0043fe;
+}
+
+.movie {
+    position: absolute;
+    bottom : 178px ;
+    right: 50px;
+    width: 125px;
+    height: 125px;
+    flex-grow: 0;
+    background-color: #668EFE;
+    font-family: SandollGyeokdongGothic;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: 0.35px;
+    text-align: center;
+    color: #fff;
+    border-radius: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .movie:hover {
+    background-color: #0043fe;
+}
+
+.choice {
+    font-family: Poppins;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 2.45px;
+    text-align: center;
+    color: #b3b3b3;
+  }
+  
+  .choice-textstyle {
+    display: block;
+    font-size: 38px;
+    letter-spacing: 2.66px;
+    color: #000;
+  }
+
+.radio-item {
+    position: relative;
+    display: block;
+    width: 475px;
+    height: 94px;
+    border-radius: 500px;
+    -webkit-backdrop-filter: blur(17.2px);
+    backdrop-filter: blur(17.2px);
+    box-shadow: 0 0 15px 0 rgba(13, 78, 185, 0.3);
+    border: solid 1px #fff;
+    background-color: rgba(0, 67, 254, 0.6);
+}
+
+.radio-item span:not(.example){
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-item span.example{
+    display: block;
+}
+
+.radio-item span:not(.example):before {
+    content: "";
+    position: absolute;
+    left: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 37px;
+    height: 37px;
+    background-image: url('/images/3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.radio-item input[type='radio']:checked + span:not(.example):before {
+    background-image: url('/images/5.png');
+}
+
+
+.radio-container {
+    font-family: Poppins;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: -1.75px;
+    text-align: center;
+    color: #fff;
+  }
+
+.example{
+    font-size: 25px;
+    letter-spacing: -1.25px;
+}
+
+.radio-item input {
+    display: none;
+}
+
+.real_input_box {
+    width: 475px;
+    height: 94px;
+    border-radius: 500px;
+    -webkit-backdrop-filter: blur(17.2px);
+    backdrop-filter: blur(17.2px);
+    box-shadow: 0 0 15px 0 rgba(13, 78, 185, 0.3);
+    border: solid 1px #0043fe;
+    background-color: #fff;
+    padding:0 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.real_input_box .custom-select {
+    position: relative;
+}
+
+
+.real_input_box .custom-select:after{
+    content: "▼";
+    font-size: 18px;
+    color: #17171B;
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.real_input_box .input_box img {
+    width: 48px;
+    height: auto;
+}
+
+.real_input_box .input_box .custom-option {
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.real_input_box input[type="text"] {
+    width: calc(100% - 89px);
+    border: none;
+    /* outline-color: #0043fe; */
+    height: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.32;
+    letter-spacing: -0.8px;
+    text-align: center;
+    color: #17171b;
+}
+
+.more {
+    font-size: 13px;
+    color: #999999;
+    line-height: 132%;
+    letter-spacing: -5%;
+    display: none;
+}
+
+.morecontainer{
+    margin-top: 50px;
+    height: 150px;
+    width : 475px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.morecontainer textarea {
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #0043fe;
+    line-height: 132%;
+    letter-spacing: -5%;
+    padding : 35px 30px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* Chrome, Safari, Opera, Edge(webkit 기반) */
+textarea::-webkit-input-placeholder {
+    color: #999999; /* 원하는 색상 값으로 변경 */
+  }
+  
+  /* Firefox 19+ */
+  textarea::-moz-placeholder {
+    color: #999999; /* 원하는 색상 값으로 변경 */
+    opacity: 1;  /* Firefox에서는 placeholder의 투명도가 default로 낮으므로 필요 시 설정 */
+  }
+  
+  /* IE 10+ */
+  textarea:-ms-input-placeholder {
+    color: #999999; /* 원하는 색상 값으로 변경 */
+  }
+  
+  /* IE 11+ */
+  textarea::-ms-input-placeholder {
+    color: #999999; /* 원하는 색상 값으로 변경 */
+  }
+  
+  /* 표준 문법 (최신 브라우저) */
+  textarea::placeholder {
+    color: #999999; /* 원하는 색상 값으로 변경 */
+  }
+  
