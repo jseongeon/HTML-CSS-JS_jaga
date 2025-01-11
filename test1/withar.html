@@ -152,44 +152,14 @@
                         <input type="text" name="contact" placeholder="연락처를 입력하세요"/>
                     </div>
                     <div class="morecontainer">
-                        <div class="more">
+                        <div class="more" id="more-placeholder">
                             변리사에게 전달하고 싶은 말씀이 있다면 클릭해주세요
                         </div>
                         <textarea id="myTextArea"></textarea>
                     </div>
+                    <div class="next-boton">진단받기</div>
                 </div>
-                
-                <!-- <script>
-                    const selectedOption = document.getElementById('selectedOption');
-                    const options = document.getElementById('options');
-                
-                    // 드롭다운 열고 닫기
-                    selectedOption.addEventListener('click', () => {
-                    options.style.display = options.style.display === 'block' ? 'none' : 'block';
-                    });
-                
-                    // 옵션 클릭 시 선택
-                    document.querySelectorAll('.custom-option').forEach(option => {
-                    option.addEventListener('click', () => {
-                        const img = option.querySelector('img').src;
-                        const text = option.textContent.trim();
-                
-                        // 선택된 값 업데이트
-                        selectedOption.querySelector('img').src = img;
-                        selectedOption.querySelector('span').textContent = text;
-                
-                        // 드롭다운 닫기
-                        options.style.display = 'none';
-                    });
-                    });
-                
-                    // 드롭다운 외부 클릭 시 닫기
-                    document.addEventListener('click', (e) => {
-                    if (!e.target.closest('.input_box')) {
-                        options.style.display = 'none';
-                    }
-                    });
-                </script> -->
+              <!--팝업화면 -->  
     </body>
 </html>
         <!-- CSS HOVER 설정 RGBA로 되어있는 거 수정해야함.  -->
