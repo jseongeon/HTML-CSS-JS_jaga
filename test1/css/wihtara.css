@@ -24,26 +24,9 @@ body {
 .progress-bar {height: 10px; /* 진행 바 높이 */background-color: #0043fe; /* 진행 바 색상 */width: 0%; /* 초기 너비 */transition: width 0.3s ease-in-out; /* 너비 변경 애니메이션 */border-radius: 5px; /* 둥근 모서리 */}
 .back-button {position: absolute; /* 진행 바의 왼쪽에 고정 */left: -40px; /* 적절한 거리로 조정 */top: 50%;transform: translateY(-50%); /* 중앙 정렬 */background-color: #0043fe; /* 버튼 배경색 */border: none; /* 테두리 제거 */width: 30px; /* 버튼 크기 */height: 30px;border-radius: 50%; /* 둥근 버튼 */display: flex;align-items: center;justify-content: center;color: #fff; /* 버튼 안 텍스트 색상 */cursor: pointer; /* 커서 변경 */}
 .progress-text {font-size: 14px; /* 텍스트 크기 */color: #888; /* 텍스트 색상 */margin-top: 10px; /* 진행 바와 간격 */}
-.real .selfmade {
-    display: none;
-    text-align: center;
-}
-
-.frame .real .selfmade:nth-child(1) {
-        display: block;
-}
-    
-
-.frame { 
-        position: relative;
-        width: 900px;
-        /* height: 900px; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        object-fit: contain;
-      }
+.real .selfmade {display: none; text-align: center;}
+.frame .real .selfmade:nth-child(1) {display: block;}
+.frame { position: relative; width: 900px; /* height: 900px; */ display: flex; justify-content: center; align-items: center; flex-direction: column; object-fit: contain;}
 
 .partner {
     font-family: SandollGyeokdongG2TTF-04Rg;
@@ -299,12 +282,14 @@ body {
     color: #17171b;
 }
 
-.more {
+.morecontainer .more {
+    cursor: pointer;
     font-size: 13px;
     color: #999999;
+    text-align: center;
     line-height: 132%;
     letter-spacing: -5%;
-    display: none;
+    /* display: none; */
 }
 
 .morecontainer{
@@ -327,6 +312,7 @@ body {
     padding : 35px 30px;
     box-sizing: border-box;
     resize: none;
+    display: none;
 }
 
 /* Chrome, Safari, Opera, Edge(webkit 기반) */
@@ -335,23 +321,34 @@ textarea::-webkit-input-placeholder {
   }
   
   /* Firefox 19+ */
-  textarea::-moz-placeholder {
-    color: #999999; /* 원하는 색상 값으로 변경 */
-    opacity: 1;  /* Firefox에서는 placeholder의 투명도가 default로 낮으므로 필요 시 설정 */
-  }
+textarea::-moz-placeholder {color: #999999; /* 원하는 색상 값으로 변경 */ opacity: 1;  /* Firefox에서는 placeholder의 투명도가 default로 낮으므로 필요 시 설정 */}
   
   /* IE 10+ */
-  textarea:-ms-input-placeholder {
-    color: #999999; /* 원하는 색상 값으로 변경 */
-  }
+textarea:-ms-input-placeholder {color: #999999; /* 원하는 색상 값으로 변경 */}
   
   /* IE 11+ */
-  textarea::-ms-input-placeholder {
-    color: #999999; /* 원하는 색상 값으로 변경 */
-  }
+textarea::-ms-input-placeholder {color: #999999; /* 원하는 색상 값으로 변경 */}
   
   /* 표준 문법 (최신 브라우저) */
-  textarea::placeholder {
-    color: #999999; /* 원하는 색상 값으로 변경 */
-  }
-  
+textarea::placeholder {color: #999999; /* 원하는 색상 값으로 변경 */}
+
+.next-boton{
+    width: 201px; 
+    height: 94px; 
+    border-radius: 500px; 
+    -webkit-backdrop-filter: blur(17.2px); 
+    backdrop-filter: blur(17.2px); 
+    box-shadow: 0 0 15px 0 rgba(13, 78, 185, 0.3); 
+    border: solid 1px #0043fe; 
+    background-color: #fff;
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.32;
+    letter-spacing: -1.3px;
+    text-align: center;
+    color: #000;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}

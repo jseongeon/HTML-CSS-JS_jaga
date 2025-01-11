@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let backButton = document.getElementById("back-button"); // 뒤로 가기 버튼
     let progressText = document.getElementById("progress-text"); // 단계 텍스트
     let progressBar = document.getElementById("progress-bar"); // 진행 바
-
     let totalSteps = 4; // 총 단계 수
     let currentIndex = 0; // 현재 단계 인덱스
 
@@ -108,4 +107,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.getElementById("myTextArea").placeholder = 
   "ex) 해외 거주중입니다.\nex) 해외 출원까지 관심 있습니다.";
+  
+  let clicktext = document.getElementById("more-placeholder"); // 클릭 가능한 텍스트
+  let textArea = document.getElementById("myTextArea"); // 숨겨진 입력창
+
+  clicktext.addEventListener("click", () => {
+    clicktext.style.display = "none"; // 클릭 텍스트 숨기기
+    textArea.style.display = "block"; // 텍스트 입력창 보이기
+    });
 });
+
