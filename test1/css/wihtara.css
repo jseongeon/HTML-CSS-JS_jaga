@@ -6,44 +6,93 @@
         src: url('/font/NanumPenScript-Regular.woff')
       format("woff");
   } */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; margin: 0;
+  @font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(/test1/font/Pretendard-Black.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(/test1/font/Pretendard-ExtraBold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(/test1/font/Pretendard-Bold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(/test1/font/Pretendard-SemiBold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(/test1/font/Pretendard-Medium.woff2) format('woff2');
 }
 
-#progress-container {display: none; position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 70%; max-width: 800px; text-align: center; z-index: 1000; background-color: #fff; padding: 10px 0; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(/test1/font/Pretendard-Regular.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(/test1/font/Pretendard-Light.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url(/test1/font/Pretendard-ExtraLight.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url(/test1/font/Pretendard-Thin.woff2) format('woff2');
+}
+
+body {font-family: 'pretendard'; background-color: #fff; min-height: 100vh; margin: 0;}
+#progress-container {display: none; position: relative; top: 0; left: 50%; transform: translateX(-50%); width: 70%; max-width: 450px; text-align: center; z-index: 1000; background-color: #fff; padding: 10px 0; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin: 0 0 15px 15px;}
 #progress{display: flex; align-items: center; justify-content: space-between; position: relative;}
-#back-button{border: none; background: none; cursor: pointer; position: absolute; left: -40px; top: 50%; transform: translateY(-50%);}
+#back-button{border: none; background: none; cursor: pointer; position: absolute; left: 0px; top: 50%; transform: translateY(-50%);}
 #back-button-inner{width: 30px; height: 30px; background-color: #0043fe; border-radius: 50%; display: flex; align-items: center; justify-content: center;}
 #back-button-inner span{color: #fff; font-size: 20px;}
 .progress-bar {height: 10px; /* 진행 바 높이 */background-color: #0043fe; /* 진행 바 색상 */width: 0%; /* 초기 너비 */transition: width 0.3s ease-in-out; /* 너비 변경 애니메이션 */border-radius: 5px; /* 둥근 모서리 */}
 .back-button {position: absolute; /* 진행 바의 왼쪽에 고정 */left: -40px; /* 적절한 거리로 조정 */top: 50%;transform: translateY(-50%); /* 중앙 정렬 */background-color: #0043fe; /* 버튼 배경색 */border: none; /* 테두리 제거 */width: 30px; /* 버튼 크기 */height: 30px;border-radius: 50%; /* 둥근 버튼 */display: flex;align-items: center;justify-content: center;color: #fff; /* 버튼 안 텍스트 색상 */cursor: pointer; /* 커서 변경 */}
-.progress-text {font-size: 14px; /* 텍스트 크기 */color: #888; /* 텍스트 색상 */margin-top: 10px; /* 진행 바와 간격 */}
+#progress-text {font-size: 14px; /* 텍스트 크기 */color: #888; /* 텍스트 색상 */margin-left: 50px; /* 진행 바와 간격 */}
 .real .selfmade {display: none; text-align: center;}
 .frame .real .selfmade:nth-child(1) {display: block;}
-.frame { position: relative; width: 900px; /* height: 900px; */ display: flex; justify-content: center; align-items: center; flex-direction: column; object-fit: contain;}
-
+.frame {margin: 0 auto; position: relative; width: 900px; /* height: 900px; */ display: flex; justify-content: center; align-items: center; flex-direction: column; object-fit: contain;}
 .partner {
-    font-family: SandollGyeokdongG2TTF-04Rg;
-    font-size: 23px;
-    font-weight: normal;
+    /* font-family: SandollGyeokdongG2TTF-04Rg; */
+    font-size: 15px;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.3;
     letter-spacing: -1.61px;
     text-align: left;
     color: #000;
-    margin-bottom: 13px;
+    margin: 10px auto 13px;
 }
 .patentpartner {
-    font-family: SandollGyeokdongG2TTF-06Hv;
-    font-size: 44px;
-    font-weight: normal;
+    /* font-family: SandollGyeokdongG2TTF-06Hv; */
+    font-size: 25px;
+    font-weight: 700;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.3;
@@ -52,22 +101,24 @@ body {
     color: #0043fe;
     margin-bottom: 60px;
 }
-
+    
 .ment {
-    font-family: Poppins;
-    font-size: 71px;
-    font-weight: bold;
+    /* font-family: Poppins; */
+    font-size: 50px;
+    font-weight: 800;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: 4.97px;
     text-align: center;
     color: #000;
-    margin-bottom: 131px;
+    margin-bottom: 10px;
 }
 
-.m_ment {
-    font-family: "Nanum Pen Script", cursive;
+.free {font-size: 15px; font-weight: 300; margin-bottom: 250px;} 
+
+/* .m_ment {
+    font-family: "Nanum Pen Script", cursive; 
     font-size: 71px;
     font-weight: normal;
     font-stretch: normal;
@@ -77,12 +128,12 @@ body {
     text-align: center;
     color: #000;
     margin-bottom: 189px;    
-
-}
+} */
 
 .botton1 {
-    width: 367px;
-    height: 94px;
+    margin: 0 auto;
+    width: 250px;
+    height: 75px;
     border-radius: 500px;
     -webkit-backdrop-filter: blur(17.2px);
     backdrop-filter: blur(17.2px);
@@ -90,8 +141,8 @@ body {
     border: solid 1px #fff;
     background-color: #668EFE;
     font-family: Poppins;
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 700;
     font-stretch: normal;
     font-style: normal;
     line-height: 50px; /* 폰트 크기와 동일하게 */
@@ -108,21 +159,19 @@ body {
             }
 }
 
-.botton1:hover {
-    background-color: #0043fe;
-}
+.botton1:hover {background-color: #0043fe;}
 
 .movie {
     position: absolute;
-    bottom : 178px ;
+    bottom : 120px ;
     right: 50px;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     flex-grow: 0;
     background-color: #668EFE;
-    font-family: SandollGyeokdongGothic;
-    font-size: 15px;
-    font-weight: normal;
+    /* font-family: SandollGyeokdongGothic; */
+    font-size: 12px;
+    font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: 2;
@@ -137,25 +186,25 @@ body {
     cursor: pointer;
   }
 
-  .movie:hover {
-    background-color: #0043fe;
-}
+  .movie:hover {background-color: #0043fe;}
 
 .choice {
-    font-family: Poppins;
-    font-size: 35px;
-    font-weight: bold;
+    /* font-family: Poppins; */
+    font-size: 14px;
+    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: 2.45px;
     text-align: center;
     color: #b3b3b3;
+    margin-bottom: 30px;
   }
   
   .choice-textstyle {
     display: block;
-    font-size: 38px;
+    font-size: 24px;
+    font-weight: 800;
     letter-spacing: 2.66px;
     color: #000;
   }
@@ -163,15 +212,19 @@ body {
 .radio-item {
     position: relative;
     display: block;
-    width: 475px;
-    height: 94px;
+    width: 400px;
+    height: 50px;
     border-radius: 500px;
     -webkit-backdrop-filter: blur(17.2px);
     backdrop-filter: blur(17.2px);
     box-shadow: 0 0 15px 0 rgba(13, 78, 185, 0.3);
     border: solid 1px #fff;
     background-color: rgba(0, 67, 254, 0.6);
+    cursor: pointer ;
+    margin-bottom: 10px;
 }
+
+.radio-item:hover {background-color: #0043fe;}
 
 .radio-item span:not(.example){
     width: 100%;
@@ -208,8 +261,8 @@ body {
 
 
 .radio-container {
-    font-family: Poppins;
-    font-size: 35px;
+    /* font-family: Poppins; */
+    font-size: 20px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -220,8 +273,9 @@ body {
   }
 
 .example{
-    font-size: 25px;
-    letter-spacing: -1.25px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .radio-item input {
@@ -229,8 +283,8 @@ body {
 }
 
 .real_input_box {
-    width: 475px;
-    height: 94px;
+    width: 400px;
+    height: 70px;
     border-radius: 500px;
     -webkit-backdrop-filter: blur(17.2px);
     backdrop-filter: blur(17.2px);
@@ -293,13 +347,9 @@ body {
 }
 
 .morecontainer{
-    margin-top: 50px;
+    margin: 30px auto 30px ;
     height: 150px;
-    width : 475px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    width : 400px;
 }
 
 .morecontainer textarea {
@@ -333,15 +383,16 @@ textarea::-ms-input-placeholder {color: #999999; /* 원하는 색상 값으로 �
 textarea::placeholder {color: #999999; /* 원하는 색상 값으로 변경 */}
 
 .next-boton{
-    width: 201px; 
-    height: 94px; 
+    width: 200px; 
+    height: 60px; 
+    margin : 0 auto;
     border-radius: 500px; 
     -webkit-backdrop-filter: blur(17.2px); 
     backdrop-filter: blur(17.2px); 
     box-shadow: 0 0 15px 0 rgba(13, 78, 185, 0.3); 
     border: solid 1px #0043fe; 
     background-color: #fff;
-    font-family: Poppins;
+    /* font-family: Poppins; */
     font-size: 26px;
     font-weight: bold;
     line-height: 1.32;
@@ -352,3 +403,8 @@ textarea::placeholder {color: #999999; /* 원하는 색상 값으로 변경 */}
     justify-content: center;
     align-items: center;
 }
+
+.pop-up{display: none; justify-content: center;  text-align: center; width: 600px; height: 374px; flex-grow: 0; border: solid 3px #0043fe; background-color: #fff; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.pop-up img{width: 150px; height: 19.14px; margin-top: 49px;}
+.pop-up span{display: block; font-size: 18px; font-weight: bold; line-height: 1.32; letter-spacing: -0.9px; text-align: center; color: #000; margin-top: 85px;}
+.pop-up button{width: 150px; height: 70px; flex-grow: 0; margin-top: 64px; padding: 22px 58px 24px 59px; border-radius: 500px; -webkit-backdrop-filter: blur(17.2px); backdrop-filter: blur(17.2px); box-shadow: 0 0 15px 0 rgba(13, 78, 185, 0.3); border: 1px solid #0043fe; background-color: #fff; flex-grow: 0; font-size: 18px; font-weight: bold; line-height: 1.32; letter-spacing: -0.9px; text-align: center; color: #000;}
